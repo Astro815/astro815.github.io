@@ -16,10 +16,10 @@
         <main>
             <section id="section-banner">
                 <img src="./assets/oc_banner.png" alt="Astro_815 Banner" class="banner-image">
-                <h2>Welcome to my page!</h2>
-                <p>Here you can find all my works and projects.</p>
+                <h2 dark-font>Welcome to my page!</h2>
+                <p dark-font>Here you can find all my works and projects.</p>
             </section>
-            <h2 style="margin: 0.25em">Services</h2>
+            <h2 style="margin: 0.25em" dark-font>Services</h2>
             <section id="section-services">
                 <button style="background-image: url(./assets/home/btn_section_editimg.jpg);">
                     <img src="./assets/image_edit_icon.svg" alt="Image Editing Icon">
@@ -42,9 +42,16 @@
                 <img src="./assets/home/oc_aboutme.gif" alt="Astro_815 oc">
                 <div>
                     <h2>About Me</h2>
-                <p>Hi! I'm Astro_815, a passionate creator and developer. I love working on various projects, from image editing to programming.</p>
+                    <p>Hi! My name is Filipe Gabriel, but call me "Astro". I'm <age>--</age> years old, and I enjoy programming, music, game development, drawing/animation, and 3D modeling.<br><br>Check out some of my work :D</p>
                 </div>
             </section>
+            <footer>
+                <p>&copy; 2025 Astro_815</p>
+            </footer>
         </main>
     </body>
+    <script>
+        let _d = new Date();
+        document.querySelector("age").textContent = _d.getFullYear() - 2006;
+    </script>
 </html>

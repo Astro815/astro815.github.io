@@ -1,0 +1,21 @@
+/* FONTs */
+
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap');
+
+h2{
+    color: #fed;
+    font-family: "Azeret Mono", monospace;
+}
+
+*[dark-font=""] {
+    color: #321;
+}
+p {
+    color: #dcb;
+    font-family: "Azeret Mono", monospace;
+    font-size: 12pt;
+}
+
+footer p{
+    color: #543;
+}
