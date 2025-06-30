@@ -1,4 +1,5 @@
 @import url(./style/default.css);
+@import url(./style/cassosel.css);
 
 html,
 body {
@@ -125,7 +126,7 @@ section:not(:first-child) {
     box-sizing: border-box;
 }
 
-#section-services button {
+#section-services a {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -143,18 +144,18 @@ section:not(:first-child) {
     transition: transform 100ms;
 }
 
-#section-services button:hover {
+#section-services a:hover {
     transform: scale(1.1);
     transition: transform 100ms;
 }
 
-#section-services button img {
+#section-services a img {
     width: 3em;
     height: auto;
     margin-bottom: 0.5em;
 }
 
-#section-services button span {
+#section-services a span {
     font-size: 0.9em;
     text-align: center;
     font-weight: bold;
@@ -175,6 +176,7 @@ section:not(:first-child) {
 #section-about > img {
     height: 100%;
     object-fit: cover;
+    filter: saturate(1.5);
 }
 
 #section-about > div {
@@ -188,12 +190,12 @@ section:not(:first-child) {
         flex-direction: column;
         height: auto;
     }
-
+    
     #section-about > div {
         margin: unset;
         width: 100%;
     }
-
+    
     #section-about > img {
         width: auto;
         height: 8em;
@@ -204,30 +206,35 @@ section:not(:first-child) {
 #list-socials{
     display: flex;
     flex-direction: row;
+    margin-top: 1em;
 }
 
 .link-button {
-	display: flex;
+    display: flex;
 	flex-direction: row;
-	width: 1.7em;
-	height: 1.7em;
+	width: 2.5em;
+	height: 2.5em;
 	border-radius: 3em;
 	border: 0px;
 	padding: 0.4em;
-	transition: width 200ms;
 	align-items: center;
 	margin-right: 0.75em;
 	background-color: #987;
-    text-decoration: none;
+	text-decoration: none;
+	justify-content: center;
+}
+
+.link-button:hover {
+    background-color: rgb(192, 174, 156);
 }
 
 .link-button img{
-    height: 1.7em;
-    width: 1.7em;
+    height: 1.5em;
+    width: 1.5em;
 }
 
 .link-button p {
-	font-size: 9.5pt !important;
+    font-size: 9.5pt !important;
 	opacity: 0%;
 	color: #241007;
 	padding-left: 0.7em;
@@ -235,11 +242,32 @@ section:not(:first-child) {
     pointer-events: none;
 }
 
-.link-button:hover {
-    width: 11em;
-    transition: width 200ms;
+/* SECTION IMAGE-EDITING */
+#section-image-editing{
+    background-color: #241007;
 }
 
-.link-button:hover p {
-    opacity: 100%;
+#section-image-editing > div{
+    display: grid;
+    grid-template-columns: 45% 55%;
+}
+
+#section-image-editing > div[inv]{
+    grid-template-columns: 55% 45%;
+
+}
+
+#section-image-editing div > div:not(.cassosel){
+    padding: 1em;
+
+}
+
+@media only screen and (max-width:1130px) {
+    #section-image-editing > div{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #section-image-editing > div[inv]{
+        flex-direction: column;
+    }
 }
